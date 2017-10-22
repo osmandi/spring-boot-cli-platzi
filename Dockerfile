@@ -1,4 +1,5 @@
-FROM java:openjdk-8-jre-alpine
+FROM rowanto/docker-java8-mvn-nodejs-npm
 EXPOSE 8080
 WORKDIR /platzi
-COPY archivo2.txt .
+COPY ./ .
+CMD  mvn spring-boot:run
